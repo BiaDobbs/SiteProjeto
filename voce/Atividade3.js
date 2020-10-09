@@ -1,7 +1,7 @@
 var largura = 640;
 var altura = 480;
 
-var tela = 0;
+var tela = 1;
 var tempo = 0;
 
 var video;
@@ -10,10 +10,10 @@ var counter = 0;
 var vScale = 4;
 var total;
 
-let start = false;
+var start = false;
 
 
-let theShader;
+//let theShader;
 
 var muda = 0;
 var transp = 127;
@@ -69,7 +69,6 @@ function draw() {
         pop();
     }
     if (tela == 0) {
-
         image(video, 0, 0, width, height);
     }
 }

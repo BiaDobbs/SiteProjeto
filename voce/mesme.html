@@ -39,14 +39,14 @@
 <div class="modal" id="modal" style='position: fixed; top: 50%; z-index: 1;'>
     <div class="modal-header">
         <div class="title">Oi novamente! </div>
-        <button data-close-button class="close-button" onlick="timer()">&times;</button>
+        <button data-close-button class="close-button">&times;</button>
     </div>
     <div class="modal-body">
         Muito bom te ver por aqui. Mas é realmente você que está aqui? Você mesme? Como você sabe que você é você e não uma personagem? Essa atividade existe para você olhar para dentro da sua mente e do seu coraçãozinho, para todas as suas características e suas máscaras. A única regra? Mova-se.
 
         <br>
         <br>
-        <a data-close-button class="close-button" onclick="closeModal(modal)">Eu prometo que vou me mover.</a>
+        <a data-close-button class="close-button" onclick="closeModal(modal); timer()">Eu prometo que vou me mover.</a>
         <a id="enviar" href="../info.html">Quero mais informações!</a>
         <a id="restartar" href="../">Prefiro ver outra coisa.</a>
     </div>
