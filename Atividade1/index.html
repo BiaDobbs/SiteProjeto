@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Teste de AR com Video</title>
+    <title>Estante das Memórias</title>
 </head>
 
 <body>
@@ -11,7 +11,10 @@
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
-    <!--- Faz o som rodar? -->
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+
+    <!--- Faz o som rodar -->
     <script>
         AFRAME.registerComponent('audiohandler', {
             schema: {
@@ -40,6 +43,7 @@
                 }
             }
         });
+
     </script>
 
     <!-- style for the loader -->
@@ -50,7 +54,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0);
             z-index: 9999;
             display: flex;
             justify-content: center;
@@ -62,9 +66,32 @@
             font-size: 1.25em;
             color: white;
         }
-    </style>
 
-    <body style="margin : 0px; overflow: hidden;">
+    </style>
+    <a data-modal-target="#modal" target=" _blank" title="Introdução" style='position: fixed; bottom: 3%; left: 100px; z-index: 1;'>
+        <img src="/Ativo%2029.png" style="padding: 10px" width="100" height="100">
+    </a>
+
+    <div class="modal" id="modal" style='position: fixed; top: 50%; z-index: 1;'>
+        <div class="modal-header">
+            <div class="title">Olá! </div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            Você chegou na Estante das Memórias, lugar onde eu reuni diversas histórias reais que aconteceram por causa de histórias fictícias. É um espaço para ouvir outros humanos falarem sobre a vida deles e também pensar um pouco na sua. Você tem alguma memória marcada pela ficção? Alguma história que você ame e te inspire de alguma forma? Se quiser contar ela pra mim veja como em informações, mas antes vá para a página de impressão e se prepare para a atividade. Quando tiver a capa de suas histórias na mão é só mostrar uma para a câmera e ouvir.
+            <br>
+            <br>
+            <a data-close-button class="close-button" onclick="closeModal(modal)">Eu já tenho as minhas capas.</a>
+            <a id="impressos" href="/Impressos/index.html">Preciso dos arquivos para impressão.</a>
+            <a id="enviar" href="info.html">Quero mais informações!</a>
+            <a id="restartar" href="/index.html">Prefiro ver outra coisa.</a>
+        </div>
+    </div>
+    </div>
+    <div id="overlay"></div>
+
+    <body style="margin : 0px; overflow: hidden;" onload="openModal(modal)">
+
         <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
         <div class="arjs-loader">
             <div>Checando as histórias, por favor aguarde (e não esqueça de permitir a câmera!)</div>
@@ -109,7 +136,11 @@
                 <a-entity soud="src: #jekyll"></a-entity>
 
                 <!-- static camera that moves according to the device movemenents -->
-                <a-entity camera></a-entity>
+                <a-entity camera onload="openModal(modal)"></a-entity>
+
         </a-scene>
+
     </body>
-</body></html>
+</body>
+
+</html>
