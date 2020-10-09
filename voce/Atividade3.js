@@ -76,6 +76,7 @@ function draw() {
 
 function timer() {
     start = true;
+    tela = 1;
     if (start) {
         setInterval(tela++;, 20000);
         //print(tela);
