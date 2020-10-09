@@ -1,0 +1,60 @@
+<html>
+
+<head onload="openModal(modal)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+    <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="Espelhamento.js"></script>
+    <script language="javascript" type="text/javascript" src="ghost.js"></script>
+    <script language="javascript" type="text/javascript" src="multipicture.js"></script>
+    <script language="javascript" type="text/javascript" src="nostalgia.js"></script>
+    <script language="javascript" type="text/javascript" src="rainbowshader.js"></script>
+    <script language="javascript" type="text/javascript" src="texto.js"></script>
+    <script language="javascript" type="text/javascript" src="Atividade3.js"></script>
+    <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+
+    <link href="../styles.css" rel="stylesheet">
+    <script defer src="../script.js"></script>
+
+
+    <!-- This line removes any default padding and style.
+       You might only need one of these values set. -->
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background: #262626;
+        }
+
+    </style>
+</head>
+<a data-modal-target="#modal" target=" _blank" title="Introdução" style='position: fixed; bottom: 3%; left: 100px; z-index: 1;'>
+    <img src="../i.png" style="padding: 10px" width="100" height="100">
+</a>
+
+<div class="modal" id="modal" style='position: fixed; top: 50%; z-index: 1;'>
+    <div class="modal-header">
+        <div class="title">Oi novamente! </div>
+        <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+        Muito bom te ver por aqui. Mas é realmente você que está aqui? Você mesme? Como você sabe que você é você e não uma personagem? Essa atividade existe para você olhar para dentro da sua mente e do seu coraçãozinho, para todas as suas características e suas máscaras. A única regra? Mova-se.
+
+        <br>
+        <br>
+        <a data-close-button class="close-button" onclick="closeModal(modal)">Eu prometo que vou me mover.</a>
+        <a id="enviar" href="../info.html">Quero mais informações!</a>
+        <a id="restartar" href="../">Prefiro ver outra coisa.</a>
+    </div>
+</div>
+</div>
+<div id="overlay"></div>
+
+<body>
+</body>
+
+</html>
