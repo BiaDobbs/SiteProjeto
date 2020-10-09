@@ -1,8 +1,8 @@
 var largura = 640;
 var altura = 480;
 
-var tela = 1;
-var tempo = 0;
+var tela = -1;
+var vezes = 0;
 
 var video;
 var snapshots = [];
@@ -10,10 +10,8 @@ var counter = 0;
 var vScale = 4;
 var total;
 
-var start = false;
 
-
-//let theShader;
+let theShader;
 
 var muda = 0;
 var transp = 127;
@@ -31,20 +29,12 @@ function setup() {
     });
 
     video.hide();
-
 }
 
 function draw() {
     //print(tempo, ",", tela)
 
-    if (tempo > 100) {
-        tela++;
-        tempo = 0;
-        restart = true;
-        clear();
-        //snapshots.splice(0, snapshots.length);
-    }
-    if (tela > 4) {
+    if (tela > 3) {
         tela = 0;
     }
     if (tela == 3) {
@@ -63,22 +53,30 @@ function draw() {
         ghost();
         pop();
     }
-    if (tela == 4) {
+    if (tela == 0) {
         push();
         texto();
         pop();
     }
-    if (tela == 0) {
+
+    if (tela == -1) {
         image(video, 0, 0, width, height);
+        fill(0, 102, 153);
+        textSize(40);
+        text('Você não prometeu! Volta lá e promete!', height / 2, height / 2);
     }
 }
 
 function timer() {
-    start = true;
-    tela = 1;
-    if (start) {
-        setInterval(tela++;, 20000);
-        //print(tela);
+    if (vezes == 0) {
+        tela++;
+        setInterval(function () {
+            tela++;
+            print(tela);
+        }, 20000);
+        vezes++
+    } else {
+        pass;
     }
 }
 

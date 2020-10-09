@@ -49,6 +49,7 @@
 <a data-modal-target="#modal" target=" _blank" title="Introdução" style='position: fixed; bottom: 3%; left: 100px; z-index: 1;'>
     <img src="../i.png" style="padding: 10px" width="100" height="100">
 </a>
+<a href="../"> <img style='position: fixed; bottom: 3%;right: 2%; z-index: 1;' src="../seta.png" width="100" height="100"></a>
 
 <div class="modal" id="modal" style='position: fixed; top: 50%; z-index: 1;'>
     <div class="modal-header">
@@ -56,11 +57,10 @@
         <button data-close-button class="close-button">&times;</button>
     </div>
     <div class="modal-body">
-        Você conhece o Doggo Ipsum? Vai conhecer agora, porque eu ainda não escrevi esse texto.
+        Você conhece o Doggo Ipsum? Vai conhecer agora, eu ainda não escrevi esse texto daqui.
+        <br>
         <br>
         Doggo ipsum he made many woofs yapper fat boi pats doggorino blop, ruff shibe heckin good boys porgo. Very good spot doge big ol pupper the neighborhood pupper lotsa pats porgo borking doggo, much ruin diet smol borking doggo with a long snoot for pats heckin snoot. Noodle horse doggo stop it fren heckin doggo length boy, noodle horse wow very biscit borking doggo. Wow very biscit fluffer extremely cuuuuuute many pats, yapper heckin good boys. Extremely cuuuuuute sub woofer what a nice floof doggo shoob bork, tungg very taste wow long water shoob. You are doin me a concern bork smol borking doggo with a long snoot for pats most angery pupper I have ever seen sub woofer, puggo ur givin me a spook.
-
-        <br>
         <br>
         <a data-close-button class="close-button" onclick="closeModal(modal)">Eu já tenho as meus marcadores.</a>
         <a id="impressos" href="../imprime/isso.html">Preciso dos arquivos para impressão.</a>
@@ -74,11 +74,11 @@
 
 <body style="margin : 0px; overflow: hidden;" onload="openModal(modal)">
 
-    <body style="margin : 0px; overflow: hidden;">
-        <h1 Style="text-align: center">Não esqueça de permitir a câmera! Eu juro que não vou te espionar.</h1>
+    <body>
+        <h1 Style="text-align: center">Não esqueça de permitir a câmera! =)</h1>
         </div>
 
-        <a-scene embedded arjs="debugUIEnabled: false;">
+        <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
             <a-assets>
                 <video id="Taser" loop="true" crossorigin="anonymous" src='https://cdn.glitch.com/ca465b4f-3c04-4c3f-a80a-3e9eb1793394%2Fteste-Taser(g2).mp4?v=1601043486780'></video>
                 <video id="Submarino" loop="true" crossorigin="anonymous" src='https://cdn.glitch.com/1a2e728b-bace-4900-aa18-1eabf7421ee4%2FBeatriz%20Dobbs%20-%20Halloween.mp4?v=1600331147178'></video>
