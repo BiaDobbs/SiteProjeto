@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
     <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
     <script language="javascript" type="text/javascript" src="Home.js"></script>
     <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
-
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="script.js"></script>
     <!-- This line removes any default padding and style.
        You might only need one of these values set. -->
     <style>
@@ -28,21 +30,38 @@
     </style>
 </head>
 
-<body style="background: #262626">
+<body style="background: #262626" onload="openModal(modal)">
+
     <br>
-    <a href="Atividade1/index.html" target=" _blank" title="Ir para Atividade 1">
+    <a href="Atividade1/index.html" target=" _blank" title="Estante de Memórias">
         <img src="https://raw.githack.com/BiaDobbs/AR_Experience/master/Atividade1.png">
     </a>
 
-    <a href="Atividade3/index.html" target="_blank" title="Ir para Atividade 3">
+    <a href="Atividade3/index.html" target="_blank" title="Você?">
         <img src="https://raw.githack.com/BiaDobbs/AR_Experience/master/Atividade3.png" style="padding: 10px">
     </a>
-    <a href="Atividade2/index.html" target=" _blank" title="Ir para Atividade 2">
+    <a href="Atividade2/index.html" target=" _blank" title="Museu da Ficção">
         <img src="https://raw.githack.com/BiaDobbs/AR_Experience/master/Atividade2.png" style="padding: 10px"> </a>
 
-    <a href="Atividade4/index.html" target=" _blank" title="Ir para Atividade 4" style="padding: 10px">
+    <a href="Atividade4/index.html" target=" _blank" title="Aumentado" style="padding: 10px">
         <img src="https://raw.githack.com/BiaDobbs/AR_Experience/master/Atividade4.png" style="padding: 10px">
     </a>
+
+    <button data-modal-target="#modal">Informação</button>
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title">Olá! Seja muito bem-vinde! </div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            Esse é um espaço virtual dedicado às relações entre ficção e realidade. Aqui você encontra quatro experiências que usam elementos de realidade aumentada para, cada uma se referindo a uma face dessas relações.
+            Sinta-se livre para se aproximar do que mais te chamar atenção.
+            <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+        </div>
+    </div>
+    </div>
+    <div id="overlay"></div>
 </body>
 
 </html>
