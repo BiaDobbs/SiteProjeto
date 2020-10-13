@@ -2,6 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title> Museu da Ficção </title>
 
     <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
@@ -80,8 +81,9 @@
 
         <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
             <a-assets>
-                <video id="Taser" loop="true" crossorigin="anonymous" src='https://cdn.glitch.com/ca465b4f-3c04-4c3f-a80a-3e9eb1793394%2Fteste-Taser(g2).mp4?v=1601043486780'></video>
-                <video id="Submarino" loop="true" crossorigin="anonymous" src='https://cdn.glitch.com/1a2e728b-bace-4900-aa18-1eabf7421ee4%2FBeatriz%20Dobbs%20-%20Halloween.mp4?v=1600331147178'></video>
+                <video id="Taser" loop="true" crossorigin="anonymous" playsinline src='https://cdn.glitch.com/ca465b4f-3c04-4c3f-a80a-3e9eb1793394%2Fteste-Taser(g2).mp4?v=1601043486780'></video>
+                <video id="Submarino" loop="true" crossorigin="anonymous" playsinline src='https://cdn.glitch.com/1a2e728b-bace-4900-aa18-1eabf7421ee4%2FBeatriz%20Dobbs%20-%20Halloween.mp4?v=1600331147178'></video>
+                <video id="Coelho" loop="true" crossorigin="anonymous" playsinline src='https://cdn.glitch.com/1a2e728b-bace-4900-aa18-1eabf7421ee4%2FBeatriz%20Dobbs%20-%20Halloween.mp4?v=1600331147178'></video>
             </a-assets>
             <!-- <a-marker preset='hiro' vidhandler="target: #Taser">
             <a-plane height='1' width='2' position="0 0 0" rotation="-90 0 0" material='src:#Taser'>
@@ -101,6 +103,11 @@
 
             <a-marker type='pattern' url="https://cdn.glitch.com/ca465b4f-3c04-4c3f-a80a-3e9eb1793394%2Fpattern-SilhuetaSubmarino.patt?v=1601042345455" vidhandler="target: #Submarino">
                 <a-plane position="0 0 0" rotation="-90 0 0" material='src: #Submarino'>
+                </a-plane>
+            </a-marker>
+
+            <a-marker type='pattern' url="https://cdn.glitch.com/ca465b4f-3c04-4c3f-a80a-3e9eb1793394%2Fpattern-Coelho.patt?v=1602590529918" vidhandler="target: #Coelho">
+                <a-plane position="0 0 0" rotation="-90 0 0" material='src: #Coelho'>
                 </a-plane>
             </a-marker>
 
