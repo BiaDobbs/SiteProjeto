@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modal</title>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+<link href="styles.css" rel="stylesheet">
+
+<!-- customize labels of htmlcommentbox.com -->
+<script>
+    /* This code goes ABOVE the main HTML Comment Box code!
+ replace the text in the single quotes below to customize labels.*/
+    hcb_user = {
+        /* L10N */
+        comments_header: 'Livro de Assinaturas',
+        name_label: 'Seu nome',
+        content_label: 'Deixe algum comentário ou reflexão aqui',
+        submit: 'Commentar',
+        logout_link: '<img title="log out" src="https://www.htmlcommentbox.com/static/images/door_out.png" alt="[logout]" class="hcb-icon hcb-door-out"/>',
+        admin_link: '<img src="https://www.htmlcommentbox.com/static/images/door_in.png" alt="[login]" class="hcb-icon hcb-door-in"/>',
+        no_comments_msg: 'No one has commented yet. Be the first!',
+        add: 'Add your comment',
+        again: 'Post another comment',
+        rss: '<img src="https://www.htmlcommentbox.com/static/images/feed.png" class="hcb-icon" alt="rss"/> ',
+        said: 'said:',
+        prev_page: '<img src="https://www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
+        next_page: '<img src="https://www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
+        showing: 'Showing',
+        to: 'to',
+        website_label: 'website (optional)',
+        email_label: 'email',
+        anonymous: 'Anonymous',
+        mod_label: '(mod)',
+        subscribe: 'email me replies',
+        add_image: 'add image',
+        are_you_sure: 'Tem alguma coisa inapropriada aqui?',
+
+        reply: '<img src="https://www.htmlcommentbox.com/static/images/reply.png"/> reply',
+        flag: '<img src="https://www.htmlcommentbox.com/static/images/flag.png"/> flag',
+        like: '<img src="https://www.htmlcommentbox.com/static/images/like.png"/> like',
+
+        /* dates */
+        days_ago: 'dias atrás',
+        hours_ago: 'horas atrás',
+        minutes_ago: 'minutos atrás',
+        within_the_last_minute: 'Quase agora',
+
+        msg_thankyou: 'Thank you for commenting!',
+        msg_approval: '(this comment is not published until approved)',
+        msg_approval_required: 'Thank you for commenting! Your comment will appear once approved by a moderator.',
+
+        err_bad_html: 'Your comment contained bad html.',
+        err_bad_email: 'Please enter a valid email address.',
+        err_too_frequent: 'You must wait a few seconds between posting comments.',
+        err_comment_empty: 'Você tem que escrever açguma coisa pra dar certo',
+        err_denied: 'Your comment was not accepted.',
+        err_unknown: 'Your comment was blocked for unknown reasons, please report this.',
+        err_spam: 'Your comment was detected as spam.',
+        err_blocked: 'Your comment was blocked by site policy.',
+
+        /* SETTINGS */
+        MAX_CHARS: 8192,
+        PAGE: '',
+        /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+        ON_COMMENT: function() {},
+        /* Function to call after commenting. */
+        RELATIVE_DATES: true /* show dates in the form "X hours ago." etc. */
+    };
+</script>
+<!-- done customizing labels of htmlcommentbox.com -->
+
+<body>
+    <br>
+    <br>
+    <h2 style="text-align: center;"> Espero que você tenha gostado da sua visita, volte quando quiser!</h2>
+
+
+    <!-- begin wwww.htmlcommentbox.com -->
+    <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Form</a> Carregando comentários...</div>
+    <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+    <script type="text/javascript" id="hcb">
+        /*<!--*/
+        if (!window.hcb_user) {
+            hcb_user = {};
+        }(function() {
+            var s = document.createElement("script"),
+                l = hcb_user.PAGE || ("" + window.location).replace(/'/g, "%27"),
+                h = "https://www.htmlcommentbox.com";
+            s.setAttribute("type", "text/javascript");
+            s.setAttribute("src", h + "/jread?page=" + encodeURIComponent(l).replace("+", "%2B") + "&mod=%241%24wq1rdBcg%24QpLQ2swGobM3Vk%2FerVcZ2%2F" + "&opts=16862&num=10&ts=1602751878326");
+            if (typeof s != "undefined") document.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+
+    <!-- end www.htmlcommentbox.com -->
+
+    <!-- Start BawkBox Code-->
+    <script data-sil-id="5f88071877e8700011b2f1fd">
+        var loadWidget = function() {
+            var d = document,
+                w = window,
+                l = window.location,
+                p = l.protocol == "file:" ? "http://" : "//";
+            if (!w.WS) w.WS = {};
+            c = w.WS;
+            var m = function(t, o) {
+                var e = d.getElementsByTagName("script");
+                e = e[e.length - 1];
+                var n = d.createElement(t);
+                if (t == "script") {
+                    n.async = true;
+                }
+                for (k in o) n[k] = o[k];
+                e.parentNode.insertBefore(n, e)
+            };
+            m("script", {
+                src: p + "bawkbox.com/widget/like-dislike/5f88071877e8700011b2f1fd?page=" + encodeURIComponent(l + ''),
+                type: 'text/javascript'
+            });
+            c.load_net = m;
+        };
+        if (window.Squarespace) {
+            document.addEventListener('DOMContentLoaded', loadWidget);
+            setTimeOut(function() {
+                document.addEventListener('DOMContentLoaded', loadWidget);
+            }, 3000)
+        } else {
+            loadWidget()
+        }
+    </script>
+    <div class="sil-widget-like-dislike sil-widget" id="sil-widget-5f88071877e8700011b2f1fd"><a href="//bawkbox.com/install/like-dislike">Like Dislike Button</a></div>
+    <!-- End BawkBox Code-->
+</body></html>

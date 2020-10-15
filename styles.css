@@ -4,15 +4,12 @@
     box-sizing: border-box;
 }
 
-.a,
-a:link,
-a:visited {
-    text-decoration: none;
-}
+
 
 body {
     background: #262626;
     color: white;
+    font-family: 'Raleway', sans-serif;
 }
 
 .modal {
@@ -26,7 +23,8 @@ body {
     z-index: 10;
     background-color: #262626;
     width: 50%;
-    max-width: 80% font-family: 'Raleway', sans-serif;
+    max-width: 80%;
+
     font-size: 1.3rem;
     text-decoration: none;
     padding: 1%
@@ -87,7 +85,7 @@ body {
     display: inline-block;
     margin: 4px 2px;
     cursor: pointer;
-    border: 4px solid black;
+    border: 4px solid;
     border-radius: 25px 10px;
     color: white;
     font-size: 1.1rem;
@@ -143,4 +141,65 @@ body {
 #fecha:hover {
     background-color: #00b1cc;
     color: #262626;
+}
+
+
+
+/* the entire html comment box container. applies to everything */
+#HCB_comment_box {
+    color: #888;
+
+}
+
+
+/* the submit button */
+#HCB_comment_box input.submit {
+    padding: 1% 2%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: 4px solid;
+    border-radius: 25px 10px;
+    font-size: 1.1rem;
+    text-align: center;
+    border-color: #006fab;
+    background: #262626;
+    color: #006fab;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+#HCB_comment_box input.submit:hover {
+    background-color: #006fab;
+    color: #262626;
+}
+
+#HCB_comment_box #hcb_form_content,
+#HCB_comment_box #hcb_form_email,
+#HCB_comment_box #hcb_form_name,
+#HCB_comment_box #hcb_form_website {
+    background-color: lightblue;
+    border-radius: 10px 25px;
+    padding: 1%;
+    border: 0px;
+}
+
+#HCB_comment_box blockquote {
+    color: white;
+}
+
+b.author-name {
+    color: #006fab;
+}
+
+.a,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+h3 {
+    color: #006fab;
 }
