@@ -18,7 +18,8 @@ function setup() {
         video.size(canvas.width, canvas.height);
     });
     video.hide();
-    canvas.center();
+    //canvas.center();
+    canvas.position(0, 0);
     poseNet = ml5.poseNet(video, modelLoaded);
     poseNet.on('pose', gotPoses);
     classifyAudio();
