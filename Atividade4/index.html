@@ -1,13 +1,41 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <script src="p5.js"></script>
     <script src="p5.sound.min.js"></script>
-      <script src="ml5.min.js"></script>
+    <script src="ml5.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
+    <title> Viajando </title>
 
-  </head>
-  <body>
+</head>
+
+<body>
     <script src="sketch.js"></script>
-  
+    <link href="../styles.css" rel="stylesheet">
+    <script defer src="../script.js"></script>
 
-</body></html>
+    <h1 Style="text-align: center">Não esqueça de permitir a câmera! =)</h1>
+
+    <div class="modal" id="modal" style='position: fixed; top: 50%; z-index: 1;'>
+        <div class="modal-header">
+            <div class="title">Olá! </div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            Você conhece o Doggo Ipsum? Vai conhecer agora, eu ainda não escrevi esse texto daqui.
+            <br>
+            <br>
+            Doggo ipsum he made many woofs yapper fat boi pats doggorino blop, ruff shibe heckin good boys porgo. Very good spot doge big ol pupper the neighborhood pupper lotsa pats porgo borking doggo, much ruin diet smol borking doggo with a long snoot for pats heckin snoot. Noodle horse doggo stop it fren heckin doggo length boy, noodle horse wow very biscit borking doggo. Wow very biscit fluffer extremely cuuuuuute many pats, yapper heckin good boys. Extremely cuuuuuute sub woofer what a nice floof doggo shoob bork, tungg very taste wow long water shoob. You are doin me a concern bork smol borking doggo with a long snoot for pats most angery pupper I have ever seen sub woofer, puggo ur givin me a spook.
+            <br>
+            <a data-close-button class="close-button" onclick="closeModal(modal)">OK!</a>
+            <a id="restartar" href="../">Prefiro ver outra coisa.</a>
+        </div>
+    </div>
+    </div>
+    <div id="overlay"></div>
+
+</body>
+
+</html>
