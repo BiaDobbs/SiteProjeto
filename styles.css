@@ -4,7 +4,19 @@
     box-sizing: border-box;
 }
 
+.a,
+a:link,
+a:visited {
+    text-decoration: none;
+}
 
+h3 {
+    color: #006fab;
+}
+
+#HCB_comment_box textarea {
+    width: 80%;
+}
 
 body {
     background: #262626;
@@ -191,15 +203,5 @@ body {
 }
 
 b.author-name {
-    color: #006fab;
-}
-
-.a,
-a:link,
-a:visited {
-    text-decoration: none;
-}
-
-h3 {
     color: #006fab;
 }
