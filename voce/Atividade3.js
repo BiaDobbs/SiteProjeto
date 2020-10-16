@@ -23,7 +23,7 @@ let overAllTexture;
 function setup() {
     var relogio = 0;
     canvas = createCanvas(windowWidth, windowHeight);
-    canvas.center();
+    canvas.position(0, 0);
     video = createCapture(VIDEO, () => {
         video.size(canvas.width, canvas.height);
     });
