@@ -46,6 +46,7 @@
             }
         }
     });
+
 </script>
 
 <a data-modal-target="#modal" target=" _blank" title="Introdução" style='position: fixed; bottom: 3%; left: 2%; z-index: 1;'>
@@ -74,7 +75,7 @@
 <div id="overlay"></div>
 
 
-<body style="margin : 0px; overflow: hidden;" >
+<body style="margin : 0px; overflow: hidden;" onload="openModal(modal)">
 
     <body>
         <h1 Style="text-align: center">Não esqueça de permitir a câmera! =)</h1>
@@ -115,4 +116,6 @@
             <a-entity camera></a-entity>
         </a-scene>
 
-    </body></html>
+    </body>
+
+</html>

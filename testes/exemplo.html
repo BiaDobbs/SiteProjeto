@@ -1,0 +1,36 @@
+<!doctype HTML>
+<html>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<script src="aframe.min.js"></script>
+<script src="aframe-ar.js"></script>
+<script src="aframe-particle-system-component.js"></script>
+
+<body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+        <a-marker preset="hiro">
+            <a-entity position="1 -1 1" scale="0.1 0.1 0.1" gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/BiaDobbs/AR_Experience/master/Piramide_sozinha.gltf"></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+
+        <a-marker type="pattern" url="kanji.patt">
+            <a-entity position="0 0 0" particle-system="
+                texture: sparkle.png;
+                color: #616aed, #8af2da; 
+                size: 2, 0;
+                velocityValue: 0.001 0.001 0.001;
+                velocitySpread: 0.5 0 0.5; 
+                accelerationValue: 0.001 0.001 0.001;
+                accelerationSpread: 0.001 0.001 0.001;
+                rotationAngle: 0; 
+                blending: 2;
+                particleCount: 250;
+                maxAge: 8; ">
+            </a-entity>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+
+    </a-scene>
+</body>
+
+</html>
