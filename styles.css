@@ -165,7 +165,8 @@ body {
 
 
 /* the submit button */
-#HCB_comment_box input.submit {
+#HCB_comment_box input.submit,
+#subm {
     padding: 1% 2%;
     text-align: center;
     text-decoration: none;
@@ -181,9 +182,12 @@ body {
     color: #006fab;
     text-decoration: none;
     text-shadow: none;
+    float: right;
 }
 
-#HCB_comment_box input.submit:hover {
+
+#HCB_comment_box input.submit:hover,
+#subm:hover {
     background-color: #006fab;
     color: #262626;
 }
@@ -191,11 +195,13 @@ body {
 #HCB_comment_box #hcb_form_content,
 #HCB_comment_box #hcb_form_email,
 #HCB_comment_box #hcb_form_name,
-#HCB_comment_box #hcb_form_website {
+#HCB_comment_box #hcb_form_website,
+.caixa {
     background-color: lightblue;
     border-radius: 10px 25px;
     padding: 1%;
     border: 0px;
+    margin: 1%;
 }
 
 #HCB_comment_box blockquote {
@@ -204,4 +210,19 @@ body {
 
 b.author-name {
     color: #006fab;
+}
+
+
+.ptexto {
+    padding: 5%;
+    padding-top: 2%;
+}
+
+#mbox,
+.conteiner {
+    width: 80%;
+}
+
+.conteiner {
+    margin-left: 5%
 }
