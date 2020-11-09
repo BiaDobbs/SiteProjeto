@@ -101,6 +101,7 @@
 
         <!-- a-frame scene -->
         <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+            <!-- carrega os arquivos -->
             <a-assets>
                 <audio src="https://cdn.glitch.com/ca465b4f-3c04-4c3f-a80a-3e9eb1793394%2FTeste%20de%20a%CC%81udio%20hobbit.mp3?v=1601068258942" preload="auto" id="hobbit">
                 </audio>
@@ -113,32 +114,46 @@
                 <audio src="https://cdn.glitch.com/ca465b4f-3c04-4c3f-a80a-3e9eb1793394%2FDoctor%20Who%202013%20Extended%20Theme%20with%20Middle%208.mp3?v=1601069509607" preload="auto" id="who">
                 </audio>
 
-            </a-assets>
-            <a-nft type="nft" url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/BiaDobbs/AR_Experience/master/hobbit' smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" audiohandler="target: #hobbit">
-                <!-- as a child of the a-nft entity, you can define the content to show. -->
-                <a-entity soud="src: #hobbit"></a-entity>
+                <audio src="https://cdn.glitch.com/ca465b4f-3c04-4c3f-a80a-3e9eb1793394%2FGatsby.wav?v=1603988596349" preload="auto" id="gatsby">
+                </audio>
 
+                <audio src="https://cdn.glitch.com/ca465b4f-3c04-4c3f-a80a-3e9eb1793394%2FMafalda.wav?v=1603988560673" preload="auto" id="mafalda">
+                </audio>
+
+                <audio src="https://cdn.glitch.com/ca465b4f-3c04-4c3f-a80a-3e9eb1793394%2FMilenium.wav?v=1603988608440" preload="auto" id="milennium">
+                </audio>
+
+            </a-assets>
+            <!-- coloca cada um dos marcadores -->
+            <a-nft type="nft" url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/BiaDobbs/AR_Experience/master/hobbit' smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" audiohandler="target: #hobbit">
+                <a-entity soud="src: #hobbit"></a-entity>
             </a-nft>
 
-            <a-nft type="nft" url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/BiaDobbs/AR_Experience/master/invisivel.fset3' smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" audiohandler="target: #invisivel">
-                <!-- as a child of the a-nft entity, you can define the content to show. -->
-
+            <a-nft type="nft" url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/BiaDobbs/AR_Experience/master/invisivel' smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" audiohandler="target: #invisivel">
                 <a-entity soud="src: #invisivel" depth="200" height="200" width="200"></a-entity>
             </a-nft>
 
             <a-nft type="nft" url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/BiaDobbs/AR_Experience/master/chaos' smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" audiohandler="target: #who">
-                <!-- as a child of the a-nft entity, you can define the content to show. -->
-
                 <a-entity soud="src: #who" depth="200" height="200" width="200"></a-entity>
-
             </a-nft>
 
             <a-nft type="nft" url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/BiaDobbs/AR_Experience/master/jekyll' smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" audiohandler="target: #jekyll">
-                <!-- as a child of the a-nft entity, you can define the content to show. -->
                 <a-entity soud="src: #jekyll"></a-entity>
+            </a-nft>
 
-                <!-- static camera that moves according to the device movemenents -->
-                <a-entity camera></a-entity>
+            <a-nft type="nft" url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/BiaDobbs/AR_Experience/master/Mafalda' smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" audiohandler="target: #mafalda">
+                <a-entity soud="src: #mafalda"></a-entity>
+            </a-nft>
+
+            <a-nft type="nft" url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/BiaDobbs/AR_Experience/master/Gatsby' smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" audiohandler="target: #gatsby">
+                <a-entity soud="src: #gatsby"></a-entity>
+            </a-nft>
+
+            <a-nft type="nft" url='https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/BiaDobbs/AR_Experience/master/Milennium' smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" audiohandler="target: #milennium">
+                <a-entity soud="src: #milennium"></a-entity>
+            </a-nft>
+            <!-- static camera that moves according to the device movemenents -->
+            <a-entity camera></a-entity>
 
         </a-scene>
 
