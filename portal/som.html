@@ -15,8 +15,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
 
 
-    <script src="sketch.js"></script>
+    <!--- <script src="sketch.js"></script>-->
 
+    <script>
+        var a = new Audio('A.mp3');
+        var e = new Audio('E.mp3');
+        var p = new Audio('P.mp3');
+
+        function som(letter) {
+            if (letter == 'a') {
+                a.play();
+            } else if (letter == 'e') {
+                e.play();
+            } else if (letter == 'p') {
+                p.play();
+            }
+        }
+
+    </script>
 </head>
 
 <a data-modal-target="#modal" target=" _blank" title="Introdução" style='position: fixed; bottom: 3%; left: 100px; z-index: 1;'>
@@ -26,14 +42,11 @@
 
 <div class="modal" id="modal" style='position: fixed; top: 50%; z-index: 1;'>
     <div class="modal-header">
-        <div class="title">Olá! </div>
+        <div class="title">Hey! </div>
         <button data-close-button class="close-button">&times;</button>
     </div>
     <div class="modal-body">
-        Você conhece o Doggo Ipsum? Vai conhecer agora, eu ainda não escrevi esse texto daqui.
-        <br>
-        <br>
-        Doggo ipsum he made many woofs yapper fat boi pats doggorino blop, ruff shibe heckin good boys porgo. Very good spot doge big ol pupper the neighborhood pupper lotsa pats porgo borking doggo, much ruin diet smol borking doggo with a long snoot for pats heckin snoot. Noodle horse doggo stop it fren heckin doggo length boy, noodle horse wow very biscit borking doggo. Wow very biscit fluffer extremely cuuuuuute many pats, yapper heckin good boys. Extremely cuuuuuute sub woofer what a nice floof doggo shoob bork, tungg very taste wow long water shoob. You are doin me a concern bork smol borking doggo with a long snoot for pats most angery pupper I have ever seen sub woofer, puggo ur givin me a spook.
+        Que bom que achou esse lugar, ele é bem interessante. Tudo que você precisa fazer é um som que tudo muda. Tente <a onclick="som('A');">assoviar</a>, <a onclick="som('E');">estalar a língua</a> e <a onclick="som('P');">bater palma</a> pra ver o que acontece. Mas vai com calma, ok? Nada de sobrecarregar a Theke com vários barulhos ao mesmo tempo. E se você quiser entender exatamente quais são os sons que tem que fazer é só clicar nas palavras e ouvir atentamente.
         <br>
         <br>
         <a class="botao" id="fecha" onclick="closeModal(modal)">OK!</a>
@@ -49,4 +62,6 @@
     <h1 Style="text-align: center">Não esqueça de permitir a câmera e o microfone! =)</h1>
 
 
-</body></html>
+</body>
+
+</html>

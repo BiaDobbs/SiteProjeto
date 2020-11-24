@@ -34,17 +34,19 @@
 
         <a href="comente.html"> <img style='position: fixed; bottom: 3%;right: 2%; z-index: 1;' src="livro.png" width="100" height="100"></a>
 
-        <div class="modal" id="modal">
+        <div class="modal" id="modal" style="height: auto; width:60%;">
             <div class="modal-header">
                 <div class="title">Olá! Seja muito bem-vinde! </div>
                 <button data-close-button class="close-button">&times;</button>
             </div>
             <div class="modal-body">
-                Agora você está na Theke, um espaço virtual dedicado às relações entre ficção e realidade. Aqui você encontra quatro experiências em realidade aumentada, cada uma se referindo a uma face dessas relações.
-                Sinta-se livre para se aproximar do que mais te chamar atenção, não tenha medo de se perder e divirta-se!
+                <video style="width: 100%; height: auto; margin: auto" controls autoplay>
+                    <source src="Intro.mp4" style="margin: auto">
+                </video>
                 <br>
                 <br>
-                <a class="botao" id="fecha" onclick="closeModal(modal)">OK!</a>
+                <a class="botao" id="fecha" onclick="closeModal(modal)">Entrar</a>
+                <a class="botao" id="restartar" href="info.html">Quero mais informações!</a>
 
             </div>
         </div>
