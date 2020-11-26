@@ -10,6 +10,9 @@ let circulo;
 let portais;
 let portão;
 let fundo;
+let aviso;
+
+
 
 function preload() {
     classifierAudio = ml5.soundClassifier(AudioModelURL + 'model.json');
@@ -27,11 +30,12 @@ function preload() {
 }
 
 function setup() {
+    aviso = select("#aviso");
     canvas = createCanvas(windowWidth, windowHeight);
+    //canvas.position(0,0);
     video = createCapture(VIDEO, () => {
         video.size(canvas.width, canvas.height);
     });
-    canvas.position(0, 0);
     video.hide();
     //canvas.center();
     classifyAudio();
@@ -51,10 +55,12 @@ function gotResults(error, results) {
     label = results[0].label;
     Confidence = results[0].confidence;
     console.log(results);
+    aviso.hide();
 }
 
 function draw() {
     image(video, 0, 0, canvas.width, canvas.height);
+
 
     if (Confidence > 0.9) {
         if (label == "Estalo") {
