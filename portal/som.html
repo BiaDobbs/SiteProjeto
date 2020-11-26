@@ -13,26 +13,8 @@
     <link href="../styles.css" rel="stylesheet">
     <script defer src="../script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="sketch.js"></script>
 
-
-    <!--- <script src="sketch.js"></script>-->
-
-    <script>
-        var a = new Audio('A.mp3');
-        var e = new Audio('E.mp3');
-        var p = new Audio('P.mp3');
-
-        function som(letter) {
-            if (letter == 'a') {
-                a.play();
-            } else if (letter == 'e') {
-                e.play();
-            } else if (letter == 'p') {
-                p.play();
-            }
-        }
-
-    </script>
 </head>
 
 <a data-modal-target="#modal" target=" _blank" title="Introdução" style='position: fixed; bottom: 3%; left: 100px; z-index: 1;'>
@@ -46,7 +28,7 @@
         <button data-close-button class="close-button">&times;</button>
     </div>
     <div class="modal-body">
-        Que bom que achou esse lugar, ele é bem interessante. Tudo que você precisa fazer é um som que tudo muda. Tente <a onclick="som('A');">assoviar</a>, <a onclick="som('E');">estalar a língua</a> e <a onclick="som('P');">bater palma</a> pra ver o que acontece. Mas vai com calma, ok? Nada de sobrecarregar a Theke com vários barulhos ao mesmo tempo. E se você quiser entender exatamente quais são os sons que tem que fazer é só clicar nas palavras e ouvir atentamente.
+        Que bom que achou esse lugar, ele é bem interessante. Tudo que você precisa fazer é algum barulho. Tente assoviar, estalar a língua e bater palma pra ver o que acontece. Mas vai com calma, ok? Nada de sobrecarregar a Theke com vários barulhos ao mesmo tempo!
         <br>
         <br>
         <a class="botao" id="fecha" onclick="closeModal(modal)">OK!</a>
@@ -60,7 +42,6 @@
 <body style="margin : 0px; overflow: hidden;" onload="openModal(modal)">
 
     <h1 Style="text-align: center">Não esqueça de permitir a câmera e o microfone! =)</h1>
-
 
 </body>
 

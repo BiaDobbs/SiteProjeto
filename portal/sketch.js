@@ -8,8 +8,16 @@ let Confidence = "waiting...";
 let classifierAudio;
 let AudioModelURL = 'https://teachablemachine.withgoogle.com/models/Xwj6I-6Y6/';
 
+let nave;
+let meteoro;
+let bolhas;
+let aneis;
+
 function preload() {
     classifierAudio = ml5.soundClassifier(AudioModelURL + 'model.json');
+    meteoro = createImg("meteoro.gif");
+    bolhas = createImg("bolhas.gif");
+    rect(0, 0, width, height);
 }
 
 function setup() {
@@ -65,14 +73,16 @@ function draw() {
 
         if (Confidence > 0.9) {
             if (label == "Estalo") {
-                fill('#00f3f7')
+                meteoro.position(pose.rightEar.x - 400, pose.rightEar.y, 10);
             } else if (label == "Palmas") {
                 fill('#011e4a')
             } else if (label == "Assobio") {
-                fill('#7faef5')
+                meteoro.position(pose.rightEar.x - 400, pose.rightEar.y, 10);
+                bolhas.position(pose.rightEar.x + 400, pose.rightEar.y, 10);
             }
         }
-        ellipse(pose.nose.x, pose.nose.y, d - 50); //Nariz
+
+        /*ellipse(pose.nose.x, pose.nose.y, d - 50); //Nariz
         ellipse(pose.rightEye.x, pose.rightEye.y, 50); //olho direito
         ellipse(pose.leftEye.x, pose.leftEye.y, 50); //olho esquerdo
         ellipse(pose.rightEye.x, pose.rightEye.y - 150, d - 50); //"chifre" direito
@@ -81,8 +91,8 @@ function draw() {
         ellipse(pose.rightEar.x, pose.rightEar.y, 10); //orelha direita
         ellipse(pose.nose.x, pose.nose.y + 130, 50); // queixo
         ellipse(pose.rightEye.x + d / 2, pose.rightEye.y - 300, 50); // acima da cabeça, no centro
-        ellipse(pose.leftEar.x + 400, pose.leftEar.y, 10); // lado esquerdo da cabeça esquerda
-        ellipse(pose.rightEar.x - 400, pose.rightEar.y, 10); // lado direito da cabeça esquerda
+        ellipse(pose.leftEar.x + 400, pose.leftEar.y, 10); // lado esquerdo da cabeça */
+        ellipse(pose.rightEar.x - 400, pose.rightEar.y, 10); // lado direito da cabeça 
     }
 }
 
